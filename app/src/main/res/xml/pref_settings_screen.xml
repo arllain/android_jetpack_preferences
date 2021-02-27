@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Primary preferences"
+        app:initialExpandedChildrenCount="2">
+        <CheckBoxPreference
+            android:key="key_preference"
+            android:title="My preference"
+            android:summary="My summary"
+            android:icon="@drawable/ic_android"/>
+
+        <SwitchPreference
+            android:key="key_switch"
+            android:title="Night Mode"/>
+
+        <SeekBarPreference
+            android:key="key_seek_bar"
+            android:title="Max request"
+            android:max="100"
+            app:min="0"
+            android:defaultValue="50"/>
+
+        <DropDownPreference
+            android:key="key_dropdown"
+            android:title="team"
+            android:entries="@array/team_entries"
+            android:entryValues="@array/team_entries_values"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Dialogs"
+        >
+        <EditTextPreference
+            android:key="key_edit_text"
+            android:title="My edit text"
+            android:dialogTitle="Dialog title"
+            android:dialogMessage="Dialog message"
+            android:positiveButtonText="Sure!"
+            android:negativeButtonText="No!"
+            app:useSimpleSummaryProvider="true"/>
+
+        <ListPreference
+            android:key="key_list_pref"
+            android:title="List Preference"
+            android:entries="@array/team_entries"
+            android:entryValues="@array/team_entries_values"
+            app:useSimpleSummaryProvider="true"/>
+
+        <MultiSelectListPreference
+            android:key="key_multi_pref"
+            android:title="Multi Preferences"
+            android:entries="@array/team_entries"
+            android:entryValues="@array/team_entries_values"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
